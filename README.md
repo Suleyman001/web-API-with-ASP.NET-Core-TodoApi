@@ -73,3 +73,44 @@ For more information on ASP.NET Core and API development:
 - [ASP.NET Core Documentation](https://docs.microsoft.com/en-us/aspnet/core)
 - [Entity Framework Core Documentation](https://docs.microsoft.com/en-us/ef/core)
 - [ASP.NET Core Web API Tutorial Series](https://docs.microsoft.com/en-us/learn/paths/aspnet-core-web-api/)
+
+
+# To-Do CRUD Application
+
+In last commit,Call an ASP.NET Core web API with JavaScript, I build an HTML page to manage to-do items via a web API. Event handlers trigger Fetch API requests for CRUD operations: 
+
+- **GET** to retrieve items
+- **POST** to add items
+- **PUT** to update items
+- **DELETE** to remove items
+
+Responses update the page dynamically. Static file serving is configured in `Program.cs`, with HTML, CSS, and JavaScript files placed in the `wwwroot` folder. All interactions happen through HTTP requests to the `/api/todoitems` route, with success and error handling in the browser.
+
+## Steps
+
+1. **Set up the web API**  
+   The API is configured in `Program.cs` to serve static files and map default routes.
+
+2. **Create HTML, CSS, and JavaScript files**  
+   These files are located in the `wwwroot` directory:
+   - `index.html`: Contains the to-do form and display table.
+   - `site.css`: Styles the page and table.
+   - `site.js`: Handles fetching and interacting with the API.
+
+3. **Implement CRUD operations**  
+   The Fetch API is used to communicate with the `/api/todoitems` endpoint:
+   - `GET` fetches the to-do items.
+   - `POST` adds a new item.
+   - `PUT` updates an existing item.
+   - `DELETE` removes an item.
+
+## Installation
+
+1. Clone the repository.
+2. Run the app using the .NET CLI or Visual Studio.
+
+```bash
+git clone <repo_url>
+cd <repo_directory>
+dotnet run
+
